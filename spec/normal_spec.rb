@@ -1,7 +1,7 @@
 require 'gilded_rose'
 require 'item'
 
-describe GildedRose do
+describe 'Generic item' do
   context 'before sell_in' do
     it 'lowers quality by one after one day' do
       item = Normal.new("item", 1, 1)
