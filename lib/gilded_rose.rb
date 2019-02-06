@@ -5,6 +5,7 @@ require_relative 'normal'
 require_relative 'legendary'
 require_relative 'conjured'
 
+# the gilded rose shop
 class GildedRose
 
   def initialize(items)
