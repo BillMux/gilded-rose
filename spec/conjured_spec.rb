@@ -1,7 +1,7 @@
 require 'gilded_rose'
 require 'item'
 
-describe 'Conjured items' do # rubocop:disable Metrics/BlockLength
+describe 'Conjured items' do
   context 'before sell in' do
     it 'does not change the name' do
       item = Conjured.new('foo', 0, 0)
