@@ -22,68 +22,6 @@ describe GildedRose do
       expect(item.quality).to eq(0)
     end
 
-    context 'when item is generic' do
-      context 'before sell_in' do
-        it 'lowers quality by one after one day' do
-          item = Normal.new("item", 1, 1)
-          GildedRose.new([item]).update_quality
-          expect(item.quality).to eq(0)
-        end
-      end
-
-      context 'after sell_in' do
-        it 'lowers quality by two after a day' do
-          item = Normal.new("item", 0, 2)
-          GildedRose.new([item]).update_quality
-          expect(item.quality).to eq(0)
-        end
-      end
-    end
-
-    context 'when item is Aged Brie' do
-      context 'before sell_in' do
-        it 'raises quality by one after a day' do
-          item = AgedBrie.new("Aged Brie", 1, 0)
-          GildedRose.new([item]).update_quality
-          expect(item.quality).to eq(1)
-        end
-
-        it 'never raises quality beyond 50' do
-          item = AgedBrie.new("Aged Brie", 1, 50)
-          GildedRose.new([item]).update_quality
-          expect(item.quality).to eq(50)
-        end
-      end
-
-      context 'after sell_in' do
-        it 'raises quality by two after a day' do
-          item = AgedBrie.new("Aged Brie", 0, 0)
-          GildedRose.new([item]).update_quality
-          expect(item.quality).to eq(2)
-        end
-
-        it 'only raises quality to 50 when quality is at 49' do
-          item = AgedBrie.new("Aged Brie", 0, 49)
-          GildedRose.new([item]).update_quality
-          expect(item.quality).to eq(50)
-        end
-      end
-    end
-
-    context 'when item is Sulfuras, Hand of Ragnaros' do
-      it 'does not change sell_in' do
-        item = Legendary.new("Sulfuras, Hand of Ragnaros", 1, 80)
-        GildedRose.new([item]).update_quality
-        expect(item.sell_in).to eq(1)
-      end
-
-      it 'does not change quality' do
-        item = Legendary.new("Sulfuras, Hand of Ragnaros", 1, 80)
-        GildedRose.new([item]).update_quality
-        expect(item.quality).to eq(80)
-      end
-    end
-
     context 'when item is Backstage passes to a TAFKAL80ETC concert' do
       context 'when sell_in is greater than 10' do
         it 'increases quality by one after each day' do
