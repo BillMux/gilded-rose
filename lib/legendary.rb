@@ -1,7 +1,7 @@
 require_relative 'item'
 
+# class for legendary items
 class Legendary < Item
-
-  def update
+  def update # rubocop:disable Style/EmptyMethod
   end
 end

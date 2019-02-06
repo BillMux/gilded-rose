@@ -1,5 +1,4 @@
-# Don't change anything in this file
-
+# Defines item with generic attributes
 class Item
   attr_accessor :name, :sell_in, :quality
 
