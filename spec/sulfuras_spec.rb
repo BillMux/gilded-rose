@@ -1,7 +1,7 @@
 require 'gilded_rose'
 require 'item'
 
-describe GildedRose do
+describe 'Sulfuras, Hand of Ragnaros' do
   it 'does not change sell_in' do
     item = Legendary.new("Sulfuras, Hand of Ragnaros", 1, 80)
     GildedRose.new([item]).update_quality

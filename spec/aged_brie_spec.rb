@@ -1,7 +1,7 @@
 require 'gilded_rose'
 require 'item'
 
-describe GildedRose do
+describe 'Aged Brie' do
   context 'before sell_in' do
     it 'raises quality by one after a day' do
       item = AgedBrie.new("Aged Brie", 1, 0)

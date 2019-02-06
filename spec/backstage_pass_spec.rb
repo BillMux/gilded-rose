@@ -1,7 +1,7 @@
 require 'gilded_rose'
 require 'item'
 
-describe GildedRose do
+describe 'Backstage passes to a TAFKAL80ETC concert' do
   context 'when sell_in is greater than 10' do
     it 'increases quality by one after each day' do
       item = BackstagePass.new("Backstage passes to a TAFKAL80ETC concert", 15, 0)
