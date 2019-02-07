@@ -20,5 +20,11 @@ describe GildedRose do
       GildedRose.new([item]).update_quality
       expect(item.quality).to eq(0)
     end
+
+    it 'never lowers sell_in below 0' do
+      item = Normal.new('item', 0, 0)
+      GildedRose.new([item]).update_quality
+      expect(item.sell_in).to eq(0)      
+    end
   end
 end
