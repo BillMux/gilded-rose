@@ -7,7 +7,6 @@ require_relative 'conjured'
 
 # the gilded rose shop
 class GildedRose
-
   def initialize(items)
     @items = items
   end
