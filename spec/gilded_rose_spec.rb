@@ -1,5 +1,5 @@
-require 'gilded_rose'
-require 'item'
+require_relative 'spec_helper'
+require_relative '../lib/gilded_rose'
 
 describe GildedRose do
   describe '#update_quality' do

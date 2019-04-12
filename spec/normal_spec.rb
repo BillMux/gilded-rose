@@ -1,5 +1,5 @@
-require 'gilded_rose'
-require 'item'
+require_relative 'spec_helper'
+require_relative '../lib/normal'
 
 describe 'Generic item' do
   context 'before sell_in' do

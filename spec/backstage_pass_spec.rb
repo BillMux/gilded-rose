@@ -1,5 +1,5 @@
-require 'gilded_rose'
-require 'item'
+require_relative 'spec_helper'
+require_relative '../lib/backstage_pass'
 
 describe 'Backstage passes to a TAFKAL80ETC concert' do
   context 'when sell_in is greater than 10' do

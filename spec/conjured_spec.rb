@@ -1,5 +1,5 @@
-require 'gilded_rose'
-require 'item'
+require_relative 'spec_helper'
+require_relative '../lib/conjured'
 
 describe 'Conjured items' do
   context 'before sell in' do

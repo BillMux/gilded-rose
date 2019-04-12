@@ -1,5 +1,5 @@
-require 'gilded_rose'
-require 'item'
+require_relative 'spec_helper'
+require_relative '../lib/legendary'
 
 describe 'Sulfuras, Hand of Ragnaros' do
   it 'does not change sell_in' do
